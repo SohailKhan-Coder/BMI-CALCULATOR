@@ -12,18 +12,14 @@ class CalculateBMI {
   }
 
   String getResultText() {
-    if (bmi != null) {
-      if (bmi! > 18) {
-        return "NORMAL";
-      } else if (bmi! >= 25) {
-        return "OverWeight";
-      } else {
-        return "NORMAL";
-      }
-    } else {
-      bmi = 23.3;
-      return "Unknown Value";
+    if ( bmi! < 18){
+      return "Loss Weight";
+    }else if (bmi! > 18 && bmi! < 25){
+      return "NORMAL";
+    }else{
+      return "Over Weight";
     }
+
   }
 
   String getInterpretation() {
